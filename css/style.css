@@ -40,33 +40,48 @@ li {
 }
 
 .page-header {
-    margin-top: 26px;
+    margin-top: 25px;
     height: 64px;
     border-top: 1px solid #AE7C78;
     border-bottom: 1px solid #AE7C78;;
 }
 
 .header-navigation {
-   position: relative;
-}
-
-.header-navigation img {
-    display: block;
-}
-
-.menu {
     padding-top: 5px;
     display: flex;
     justify-content: space-between;
 }
-.menu .part{
+
+.menu {
     width: 488px;
     display: flex;
     justify-content: space-between;
+
 }
-.header-navigation .logo {
-    position: absolute;
-    left: 550px;
+
+.logo {
+    margin-top: 10px;
+}
+
+.menu a:hover {
+    border: 1px solid #AE7C78;
+    border-radius: 30%;
+}
+
+.menu a:active {
+    border: 1px solid #ffffff;
+    border-radius: 30%;
+    background-color:rgba(174, 124, 120, 0.4);
+}
+
+.logo a:hover {
+    transform: scale(1.4, 1.4);
+}
+
+.logo a:active {
+    border: 1px solid #ffffff;
+    border-radius: 30%;
+    background-color:rgba(174, 124, 120, 0.4);
 }
 
 .heading {
@@ -74,7 +89,6 @@ li {
     font-size: 44px;
     font-weight: 400;
     line-height: 59px;
-
 }
 
 .heading span {
@@ -85,10 +99,12 @@ li {
     display: flex;
     height: 465px;
 }
+
 .offer-text {
     width: 384px;
     margin-right: 23px;
 }
+
 .offer p {
     margin-top: 24px;
     font-size: 24px;
@@ -107,6 +123,16 @@ li {
     color: white;
 }
 
+.btn:hover {
+    border: 4px solid #AE7C78;
+}
+
+.btn:active {
+    color: #AE7C78;
+    background-color: #ffffff;
+    border: 8px solid #AE7C78;
+}
+
 .offer img {
     border-radius: 10px;
 }
@@ -115,6 +141,7 @@ li {
     margin-top: auto;
     margin-right: 20px;
 }
+
 .offer-roses {
     margin-bottom: auto;
 }
@@ -122,27 +149,24 @@ li {
 .visually-hidden {
     display: none;
 }
+
 .advantage {
+    width: 1200px;
+    padding-left: 102px;
     margin-top: 48px;
     display: flex;
+    justify-content: space-between;
 }
-.advantage h3{
+
+.advantage h3 {
     font-weight: 500;
     font-size: 16px;
+    margin-bottom: 8px;
 }
-.advantage p {
-    margin-top: 8px;
-}
-.advantage li{
+
+.advantage li {
     width: 285px;
     position: relative;
-}
-.advantage li:first-of-type{
-    margin-left: 102px;
-    margin-right: 121px;
-}
-.advantage li:nth-of-type(2){
-    margin-right: 122px;
 }
 
 .advantage li:first-of-type::before {
@@ -193,12 +217,16 @@ li {
 
 .popular-text h3 {
     margin-top: 68px;
+    margin-bottom: 26px;
     font-weight: 500;
     font-size: 24px;
 }
-.popular p{
-    margin-top: 26px;
+
+.popular-text .description,
+.popular-text .size {
+    margin-bottom: 25px;
 }
+
 .popular .price {
     font-weight: 500;
     font-size: 24px;
@@ -208,25 +236,39 @@ li {
 .popular-picture {
     margin-top: 36px;
 }
+
 .popular-btn {
     display: flex;
     justify-content: center;
     margin: 0 auto;
     margin-top: 10px;
 }
-.popular-btn button{
+
+.popular-btn button {
     display: block;
     border: none;
     background: transparent;
 }
+
 .popular-btn button:first-of-type {
     margin-right: 10px;
 }
+
+.popular-btn button:hover {
+    border: 1px solid #AE7C78;
+    border-radius: 20%;
+}
+
+.popular-btn button:active {
+    background-color: rgba(174, 124, 120, 0.4);
+}
+
 .catalog {
     margin-top: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /*добавили данное свойство, чтоб при увеличении количества карточек, карточки переносились на след. строку*/
 }     
 
 .catalog h3, 
@@ -268,9 +310,18 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 442px;
+    min-height: 442px;
     width: 387px;
     border-radius: 10px;
+    height: 100%;
+}
+
+.catalog a:hover {
+    border: 6px dashed #ffffff;
+}
+
+.catalog a:active {
+    transform: scale(1.1, 1.1);
 }
 
 .discount {
@@ -292,6 +343,7 @@ li {
 
 .discount h2 {
     margin-top: 40px;
+    margin-bottom: 24px;
     color: white;
     font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     font-size: 44px;
@@ -299,8 +351,8 @@ li {
     line-height: 59px;
     letter-spacing: 0.02em;
 }
+
 .discount p {
-    margin-top: 24px;
     color: white;
     font-size: 24px;
     line-height: 29px;
@@ -308,6 +360,7 @@ li {
 
 .four-steps {
     margin-top: 80px;
+    margin-bottom: 35px;
     font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     font-size: 36px;
     font-weight: 700;
@@ -318,27 +371,30 @@ li {
 }    
 
 .delivery-and-payment {
-    margin-top: 35px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.delivery-and-payment li{
+.delivery-and-payment li {
     width: 285px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .delivery-and-payment h3 {
     margin-top: 8px;
+    margin-bottom: 8px;
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
 }
+
 .delivery-and-payment p {
-    margin-top: 8px;
     text-align: center;
 }
+
 .delivery-and-payment li::before{
     content: '';
     display: inline-block;
@@ -374,6 +430,7 @@ li {
 
 .news h2 {
     margin-top: 70px;
+    margin-bottom: 42px;
     font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     font-size: 36px;
     font-weight: 700;
@@ -383,7 +440,6 @@ li {
 
 } 
 .news p {
-    margin-top: 42px;
     text-align: left;
     font-size: 24px;
     line-height: 30px;
@@ -401,6 +457,10 @@ li {
     display: flex;
 }
 
+.share li{
+    margin-right: 21px;
+}
+
 .news .social-inst::after {
     content: '';
     display: inline-block;
@@ -408,7 +468,6 @@ li {
     height: 20px;
     vertical-align: middle;
     background-image: url(../images/instagram_icon.svg);
-    margin-right: 21px;
 }
 
 .news .social-fb::after {
@@ -418,7 +477,6 @@ li {
     height: 20px;
     vertical-align: middle;
     background-image: url(../images/facebook_icon.svg);
-    margin-right: 18.5px;
 }
 
 .news .social-tw::after {
@@ -428,6 +486,15 @@ li {
     height: 20px;
     vertical-align: middle;
     background-image: url(../images/twitter_icon.svg);
+}
+
+.share a:hover {
+    box-shadow: -10px 5px 5px #AE7C78;
+    border-bottom: 2px solid #AE7C78;
+}
+
+.share a:active {
+    transform: scale(1.4, 1.4);
 }
 
 .bouquet-picture {
@@ -440,10 +507,12 @@ li {
     flex-direction: column;
     flex-wrap: wrap;
 }
+
 .bouquet-picture div:first-of-type{
     grid-row-start: 1;
     grid-row-end: 2;
 }
+
 .bouquet-picture div:nth-of-type(2){
     grid-row-start: 2;
     grid-row-end: 3;
@@ -485,10 +554,12 @@ li {
     font-style: normal;
     font-weight: 500;
 }
+
 .contacts {
     margin-top: 80px;
     position: relative;
 }
+
 .contact-details {
     display: flex;
     flex-direction: column;
@@ -500,6 +571,7 @@ li {
     width: 386px;
     height: 520px;
 }
+
 .contact-details h2 {
     font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     font-size: 36px;
@@ -528,6 +600,15 @@ li {
     margin-top: 35px;
 }
 
+.contact-details a:hover {
+    border: 1px solid #AE7C78;
+    border-radius: 30%;
+}
+
+.contact-details a:active {
+    transform: scale(1.2, 1.2);
+}
+
 .page-footer {
     background-color:  #AE7C78;
     height: 97px;
@@ -535,7 +616,7 @@ li {
     align-items: center;
 }
 
-.navigation-and-social{
+.navigation-and-social {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -545,7 +626,7 @@ li {
     margin: 0 auto;
 }
 
-.page-footer nav{
+.page-footer nav {
     display: flex;
     align-items: center;
 }
@@ -570,6 +651,10 @@ li {
     flex-wrap: nowrap;
 }
 
+.footer-social li {
+    margin-right: 21px;
+}
+
 .footer-social .social-inst::after {
     content: '';
     display: inline-block;
@@ -577,7 +662,6 @@ li {
     height: 20px;
     vertical-align: middle;
     background-image: url(../images/footer_instagram_icon.svg);
-    margin-right: 21px;
 }
 
 .footer-social .social-fb::after {
@@ -587,7 +671,6 @@ li {
     height: 20px;
     vertical-align: middle;
     background-image: url(../images/footer_facebook_icon.svg);
-    margin-right: 18.5px;
 }
 
  .footer-social .social-tw::after {
@@ -599,3 +682,31 @@ li {
     background-image: url(../images/footer_twitter_icon.svg);
 }
 
+.footer-navigation a:hover {
+    border: 1px solid #ffffff;
+    border-radius: 30%;
+}
+
+.footer-navigation a:active {
+    border: 1px solid #ffffff;
+    border-radius: 30%;
+    background-color:rgba(255, 255, 255, 0.4);
+}
+
+.footer-logo:hover {
+    transform: scale(1.4, 1.4);
+}
+
+.footer-logo:active {
+    border: 1px solid #ffffff;
+    border-radius: 30%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-social a:hover {
+    box-shadow: -10px 5px 5px #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.footer-social a:active {
+    transform: scale(1.4, 1.4);
