@@ -1,6 +1,9 @@
 *, *::after, *::before {
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0 auto;
@@ -35,7 +38,7 @@ li {
 }
 
 .wrapper {
-	width: 1200px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
@@ -64,15 +67,13 @@ li {
 }
 
 .menu a:hover {
-    border: 1px solid #AE7C78;
-    border-radius: 30%;
+    transform: scale(1.1, 1.1); 
+    text-decoration: underline;
 }
 
 .menu a:active {
-    border: 1px solid #ffffff;
-    border-radius: 30%;
-    background-color:rgba(174, 124, 120, 0.4);
-}
+    text-shadow: 4px -4px 4px #D89999;;
+} 
 
 .logo a:hover {
     transform: scale(1.4, 1.4);
@@ -317,11 +318,14 @@ li {
 }
 
 .catalog a:hover {
-    border: 6px dashed #ffffff;
+    box-shadow: 10px 10px 10px #D89999;
 }
 
 .catalog a:active {
-    transform: scale(1.1, 1.1);
+    transform: scale(1.01, 1.01);
+    box-shadow: -10px -10px 10px #D89999,
+                10px 10px 10px #D89999;
+                
 }
 
 .discount {
@@ -489,12 +493,12 @@ li {
 }
 
 .share a:hover {
-    box-shadow: -10px 5px 5px #AE7C78;
-    border-bottom: 2px solid #AE7C78;
+    transform: scale(1.3);
 }
 
 .share a:active {
-    transform: scale(1.4, 1.4);
+    border: 1px solid #AE7C78;
+    border-radius: 20%; 
 }
 
 .bouquet-picture {
@@ -520,7 +524,7 @@ li {
 
 .reviews {
     margin-top: 80px;
-    border: 1px solid #AE7C78;  
+    border: 1px solid #AE7C78; 
 }
 
 .reviews h2 {
@@ -601,12 +605,12 @@ li {
 }
 
 .contact-details a:hover {
-    border: 1px solid #AE7C78;
-    border-radius: 30%;
+    text-decoration: underline;
 }
 
 .contact-details a:active {
-    transform: scale(1.2, 1.2);
+    text-shadow: 4px -4px 4px #D89999;
+    transform: scale(1.03);
 }
 
 .page-footer {
@@ -683,14 +687,12 @@ li {
 }
 
 .footer-navigation a:hover {
-    border: 1px solid #ffffff;
-    border-radius: 30%;
+    transform: scale(1.1, 1.1); 
+    text-decoration: underline;
 }
 
 .footer-navigation a:active {
-    border: 1px solid #ffffff;
-    border-radius: 30%;
-    background-color:rgba(255, 255, 255, 0.4);
+    text-shadow: 4px -4px 4px #D89999;
 }
 
 .footer-logo:hover {
@@ -704,10 +706,10 @@ li {
 }
 
 .footer-social a:hover {
-    box-shadow: -10px 5px 5px #ffffff;
-    border-bottom: 2px solid #ffffff;
+    transform: scale(1.3);
 }
 
 .footer-social a:active {
-    transform: scale(1.4, 1.4);
+    border: 1px solid #ffffff;
+    border-radius: 20%; 
 }
